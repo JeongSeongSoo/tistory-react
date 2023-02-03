@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# 프뚜의 REACT 강좌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 생성하기
 
-## Available Scripts
+```
+npx create-react-app tistory-react
+```
 
-In the project directory, you can run:
+## Prettier
 
-### `npm start`
+https://ssjeong.tistory.com/entry/Vue-%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4%EC%97%90%EC%84%9C-VUE-Prettier-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://ssjeong.tistory.com/entry/VUE-Vue-Prettier-%EC%84%B8%ED%8C%85-%EB%B0%8F-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+yarn add prettier
+```
 
-### `npm test`
+./tistory-react/.prettierrc 생성
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+{
+  "semi": true,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true
+}
+```
 
-### `npm run build`
+## IE11 호환
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://ssjeong.tistory.com/entry/POLYFILL-%EB%A6%AC%EC%95%A1%ED%8A%B8-IE11%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+yarn add react-app-polyfill
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+./package.json
 
-### `npm run eject`
+```
+{
+  ...
+  "browserslist": {
+    ...
+    "development": [
+      "ie 11",
+      ...
+    ],
+	...
+  },
+  ...
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+./src/index.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+...
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Router
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+https://ssjeong.tistory.com/entry/react-router-dom-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%B8%ED%8C%85
 
-## Learn More
+```
+yarn add react-router-dom
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Recoil
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://ssjeong.tistory.com/entry/React-Recoil-%EB%A6%AC%EC%95%A1%ED%8A%B8-Recoil-%EC%84%B8%ED%8C%85-%EB%B0%8F-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC
 
-### Code Splitting
+```
+yarn add recoil
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## axios
 
-### Analyzing the Bundle Size
+https://ssjeong.tistory.com/entry/Axios-React-Axios-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+yarn add axios
+```
